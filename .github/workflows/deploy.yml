@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: yarn
       - name: Generate static page
-        run: yarn generate
+        run: NUXT_APP_CDN_URL=https://cslf-fh.github.io/vueuse-sample/ yarn generate
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
